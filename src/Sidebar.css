@@ -1,0 +1,30 @@
+.sidebar {
+    overflow-y:auto;
+    width: 250px;
+    overflow-x:hidden;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh!important;
+    position: relative;
+    backface-visibility: hidden;
+    will-change: overflow;
+  }
+.ant-layout-sider {
+    flex: unset;
+    width: unset;
+}
+li.ant-menu-item.sidebar-item {
+    /* overflow-x: scroll;
+    display: flex;
+    width: 100%; */
+    margin-bottom:0px!important;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: unset!important;
+}
+.ant-layout-sider {
+    flex: unset!important;
+    max-width: unset!important; 
+    min-width: unset!important; 
+    width: 100%!important;
+}

@@ -1,0 +1,38 @@
+.ql-toolbar {
+    background: white;
+    top: 0;
+    width: 100%;
+    /* z-index: 9999; */
+}
+.quill{
+  background-color:white;
+}
+.ql-container {
+  overflow: auto;
+  box-sizing: border-box;
+  display: flex;
+  height: calc(100vh - 42px);
+  /* margin-top: -100px; */
+  /* padding-top: 100px; */
+  position: relative;
+  width: 100%;
+  backface-visibility: hidden;
+  will-change: overflow;
+}
+.ql-editor {
+  width: 100%;
+  /* padding-top: 45px; */
+  color: #111;
+
+}
+
+
+.ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6 {
+  color: #111;
+  /* padding-bottom: 5px; */
+  padding-top: 15px;
+  font-weight: bold
+}
+.ql-editor p {
+    padding-top:10px;
+}

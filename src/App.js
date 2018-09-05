@@ -21,8 +21,27 @@ class App extends Component {
     var shouldUpdate = false;
     var map = []
     var $ = cheerio.load(html);
+    var prev = {};
     $("h1, h2, h3, h4, h5, h6").each( (i, elem) => {
-        map.push({text:$(elem).text(), level:$(elem)[0].tagName.match(/\d/g)[0]})
+        const level = $(elem)[0].tagName.match(/\d/g)[0];
+        var parent = 0
+        if (prev.level){
+          if(level > prev.level){
+              parent = prev.id
+          }else if (level == prev.level){
+              parent = prev.parent_id
+          }else{
+            map[prev.parent_id].id
+          }
+        } 
+        map.push(
+          prev = { text:$(elem).text(), 
+            level: level,
+            id:i+1,
+            parent_id: parent
+          }
+        )
+        //prev = ;
     })
     if(!compare(map, this.state.map)){
       this.setState({ map:map }) 

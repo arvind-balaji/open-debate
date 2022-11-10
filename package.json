@@ -24,6 +24,6 @@
     "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron . | yarn start"
   },
   "devDependencies": {
-    "electron": "^2.0.7"
+    "electron": "^18.3.7"
   }
 }
